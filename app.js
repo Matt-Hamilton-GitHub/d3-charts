@@ -59,7 +59,6 @@ d3.select('svg')
 
 
 
-
 d3.select('input')
     .on('input', function(){
         var year = +d3.event.target.value
@@ -69,7 +68,7 @@ d3.select('input')
             .transition()
             .duration(1000)
             .ease(d3.easeLinear)
-            .delay((d,i)=>i*250)
+            .delay((d,i)=> i*250 )
             .attr('height',(d=> height - yScale(d.births)))
             .attr('y',(d=> yScale(d.births)))
             
